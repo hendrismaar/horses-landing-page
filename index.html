@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horses Webpage</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="notice">
+        <p>Take delivery by December 31 to receive 3 months of hay and a premium saddle. <a href="#">Learn more.</a></p> 
+    </div>
+    <div class="navbar">
+        <img class="logo" src="img/horses_logo.png">
+        <div class="nav-items">
+            <button class="btn-nav">Horses</button>
+            <button class="btn-nav">Care</button>
+            <button class="btn-nav">Nutrition</button>
+            <button class="btn-nav">Discover</button>
+            <button class="btn-nav">Shop</button>
+            <button class="btn-nav">A.I Powered Horses</button>
+        </div>
+    </div>
+    <div class="horse-container" id="app">
+        <div 
+            class="horse-content" 
+            v-for="(item, index) in items" 
+            :key="index" 
+            :style="{ backgroundImage: `url(${item.image})` }"
+        >
+            <p class="horse-name horse-info">{{ item.name }}</p>
+            <p class="horse-description horse-info">{{ item.description }}</p>
+            <a href="#" class="horse-order horse-info">Find out more</a>
+            <div class="horse-btn-container">
+                <button class="btn-order">Order Now</button>
+                <button class="btn-info">Learn More</button>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="disclaimer">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum distinctio nam, neque facilis repellendus tenetur culpa quas ab, harum assumenda consectetur sint, ullam cupiditate. Sapiente officia facilis asperiores reiciendis necessitatibus.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt mollitia laboriosam numquam dolorum est nisi expedita, nesciunt at explicabo facilis sint voluptatem aut eveniet eaque soluta quidem! Animi, odit amet.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, culpa voluptates totam nam sint pariatur a ea rerum aut temporibus neque corrupti nulla cupiditate quasi repellat, eligendi ipsum qui magni?</p>
+        </div>
+        <div class="footer-container">
+            <ul>
+                <li class="bottom-link">
+                    <div class="li-wrapper"> 
+                        <a href="#">Horses &#169; 2024</a>
+                    </div>
+                </li>
+                <li class="bottom-link">
+                    <div class="li-wrapper">
+                        <a href="#">Privacy & Legal</a>
+                    </div>
+                </li>
+                <li class="bottom-link">
+                    <div class="li-wrapper">
+                        <a href="#">Horse Recalls</a>
+                    </div>
+                </li>
+                <li class="bottom-link">
+                    <div class="li-wrapper">
+                        <a href="#">Contact</a>
+                    </div>
+                </li>
+                <li class="bottom-link">
+                    <div class="li-wrapper">
+                        <a href="#">News</a>
+                    </div>
+                </li>
+                <li class="bottom-link">
+                    <div class="li-wrapper">
+                        <a href="#">Get Updates</a>
+                    </div>
+                </li>
+                <li class="bottom-link">
+                    <div class="li-wrapper">
+                        <a href="#">Locations</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        const app = Vue.createApp({
+          data() {
+            return {
+              items: []
+            };
+          },
+          mounted() {
+            // Fetch the JSON file
+            fetch('data/horses.json')
+              .then(response => response.json())
+              .then(data => {
+                this.items = data;
+              })
+              .catch(error => console.error('Error loading JSON:', error));
+          }
+        });
+        app.mount('#app');
+      </script>
+</body>
+</html>

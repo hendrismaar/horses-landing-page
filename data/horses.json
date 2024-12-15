@@ -1,0 +1,27 @@
+[
+    {
+        "name":"Arabian Horse",
+        "description":"Known for its refined features, endurance, and intelligence, the Arabian is one of the oldest and most recognizable horse breeds.",
+        "image":"img/horses/arabian-horse.jpg"
+    },
+    {
+        "name":"Clydesdale",
+        "description":"A large, powerful draft horse with distinctive feathered legs, often associated with pulling heavy loads and the Budweiser commercials.",
+        "image":"img/horses/clydesdale.jpg"
+    },
+    {
+        "name":"Appaloosa",
+        "description":"Famous for its unique spotted coat patterns and versatility, the Appaloosa is a popular choice for both Western and English riding.",
+        "image":"img/horses/appaloosa.jpg"
+    },
+    {
+        "name":"Friesian",
+        "description":"An elegant black horse with long flowing mane and tail, the Friesian is known for its graceful movement and strong build.",
+        "image":"img/horses/friesian.jpg"
+    },
+    {
+        "name":"American Quarter Horse",
+        "description":"A versatile breed known for its speed in short-distance racing and prowess in ranch work and Western sports.",
+        "image":"img/horses/american-quarter-horse.jpg"
+    }
+]

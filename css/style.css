@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400..700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Markazi Text", serif;
+  background-color: grey;
+}
+
+footer {
+  padding-top: 2rem;
+  color: gray;
+  text-align: center;
+  background-color: white;
+  bottom: 0;
+}
+.notice {
+  font-size: 1.25rem;
+  font-weight: 400;
+  padding: 1rem;
+  background-color: whitesmoke;
+  position: -webkit-sticky; /* safari */
+  position: sticky;
+  top: 0;
+  text-align: center;
+  z-index: 1;
+}
+
+.notice a {
+  color: var(--text);
+}
+
+.navbar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  background-color: white;
+  gap: .1rem;
+}
+
+.btn-nav {
+  font-weight: 700;
+  border-radius: 4px;
+  padding: 8px 12px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.logo {
+  position: absolute;
+  left: 3rem;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 1rem;
+}
+
+.btn-nav:hover {  
+  background-color: lightgray;
+}
+
+.nav-items {
+  display: flex;
+  gap: 1rem;
+}
+
+.horse-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  text-align: center;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.horse-content {
+  width: 100%;
+  height: 650px; 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+}
+
+.horse-info {
+  padding: 0 20%;
+}
+
+.horse-name {
+  margin-top: 2rem;
+  font-size: 60px;
+}
+
+.horse-description {
+  font-size: 48px;
+}
+
+.horse-order {
+  font-size: 28px;
+  color: var(--text);
+}
+
+.horse-container button {
+  margin: 15px;
+  padding: .75rem 6.25rem;
+  gap: 2rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-order {
+  color: white;
+  background-color: cornflowerblue;
+}
+
+.btn-info {
+  color: black;
+  background-color: white;
+}
+
+.disclaimer{
+  font-size: 16px;
+  padding: 0 15%;
+}
+
+.bottom-link {
+  display: inline-block;
+  margin: 1rem;
+  transition: 0.1s;
+}
+
+.li-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.li-wrapper a {
+  text-decoration: none;
+  color: var(--text);
+}
